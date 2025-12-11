@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#111827" />
+  <!-- Fake camera image background -->
+  <defs>
+    <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="300" fill="url(#g1)"/>
+  <rect x="0" y="300" width="1200" height="300" fill="#1f2937"/>
+  <!-- Simulated image features (road and buildings) -->
+  <polygon points="0,300 1200,300 1200,500 0,500" fill="#374151" opacity="0.6"/>
+  <rect x="150" y="140" width="120" height="120" fill="#111827" opacity="0.12" />
+  <rect x="450" y="100" width="220" height="170" fill="#111827" opacity="0.12" />
+  <rect x="870" y="120" width="160" height="150" fill="#111827" opacity="0.12" />
+
+  <!-- Simulated LiDAR points (projected) -->
+  <g stroke="none">
+    <!-- points near center -->
+    <circle cx="600" cy="340" r="3" fill="#f97316" opacity="0.9" />
+    <circle cx="610" cy="350" r="3" fill="#f97316" opacity="0.7" />
+    <circle cx="590" cy="330" r="3" fill="#f97316" opacity="0.6" />
+    <!-- points left -->
+    <circle cx="420" cy="360" r="3" fill="#10b981" opacity="0.9" />
+    <circle cx="410" cy="370" r="3" fill="#10b981" opacity="0.7" />
+    <!-- points right -->
+    <circle cx="780" cy="355" r="3" fill="#8b5cf6" opacity="0.9" />
+    <circle cx="790" cy="345" r="3" fill="#8b5cf6" opacity="0.7" />
+  </g>
+
+  <!-- Segmentation boxes (simulated regions) -->
+  <g fill="none" stroke-width="3">
+    <rect x="560" y="300" width="120" height="95" stroke="#f97316" opacity="0.8" />
+    <rect x="500" y="280" width="230" height="140" stroke="#10b981" opacity="0.6" />
+    <rect x="740" y="300" width="150" height="110" stroke="#8b5cf6" opacity="0.6" />
+  </g>
+
+  <!-- Legend -->
+  <g font-family="sans-serif" font-size="16" fill="#ffffff">
+    <rect x="20" y="20" width="260" height="110" fill="#000000" opacity="0.3" stroke="#ffffff" stroke-opacity="0.07"/>
+    <text x="40" y="48" font-weight="600">Resultados (ejemplo) - nuScenes</text>
+    <circle cx="48" cy="75" r="6" fill="#f97316" /> <text x="66" y="80">Región / Clase A (ej. vehículo)</text>
+    <circle cx="48" cy="105" r="6" fill="#10b981" /> <text x="66" y="110">Región / Clase B (ej. peatón)</text>
+  </g>
+
+  <!-- Footer stats: simulated metrics -->
+  <g font-family="sans-serif" font-size="14" fill="#d1d5db">
+    <text x="960" y="44">mAP (simulado): 0.61</text>
+    <text x="960" y="68">IoU (simulado): 0.47</text>
+  </g>
+</svg>
